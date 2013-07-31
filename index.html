@@ -1,0 +1,30 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//domain.loc:1336/jsonwebsocketrequest.js"></script>
+<script>
+
+$.ajax({
+	type: "POST",
+	url: "/some",
+	data: { name: "John", location: "Boston" },
+    success: function (data) {
+		console.log('John Boston:', data)
+	},
+    error: function (one, two, three) {
+        console.log('error', one, two, three)
+    }
+})
+
+$.ajax({
+	type: "POST",
+	url: "/some",
+	data: { name: "Jack", location: "NY" },
+    success: function (data) {
+		console.log('Jack NY:', data)
+	},
+    error: function (one, two, three) {
+        console.log('error', one, two, three)
+    }
+})
+
+</script>
